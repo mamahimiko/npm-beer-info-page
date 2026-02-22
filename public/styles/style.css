@@ -1,0 +1,25 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background-color: brown;
+}
+
+.hero {
+  background-image: url("../images/hero-image.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+.hero-content {
+  text-align: center;
+  color: white;
+  z-index: 2;
+}

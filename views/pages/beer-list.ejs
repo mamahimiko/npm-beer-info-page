@@ -1,0 +1,46 @@
+<%- include("../partials/head") %>
+<body>
+    <%- include("../partials/main-sidebar") %>
+    <main class="responsive">
+      <%- include("../partials/sub-navbar") %>
+      <div class="page bottom active">
+		<h2 class="padding">Discover the World of Beer</h2>
+        <% if(selectedBeer) { %>
+          <article class="no-padding l">
+            <div class="grid no-space">
+              <div class="s6">
+                <img class="responsive" src="<%= selectedBeer.image %>"  style="height: 300px">
+              </div>
+              <div class="s6">
+                <div class="padding">
+                  <h5><%= selectedBeer.name %></h5>
+                  <p>Style: <%= selectedBeer.style %></p>
+                  <p>Bitterness: <%= selectedBeer.bitterness %></p>
+                  <p>Famous Product: <%= selectedBeer.famousProduct %></p>
+                  <p><%= selectedBeer.description %></p>
+                </div>
+              </div>
+            </div>
+          </article>
+          <article class="no-padding round m s">
+                <img class="responsive medium top-round" src="<%= selectedBeer.image %> "  style="height: 400px";>
+              </div>
+                <div class="padding m s">
+                  <h5><%= selectedBeer.name %></h5>
+                  <p>Style: <%= selectedBeer.style %></p>
+                  <p>Bitterness: <%= selectedBeer.bitterness %></p>
+                  <p>Famous Product: <%= selectedBeer.famousProduct %></p>
+                  <p><%= selectedBeer.description %></p>
+                </div>
+            </div>
+          </article>
+        <%} else {%>
+            <div class="padding page bottom active">
+                <p>Welcome to our beer guide, your starting point for exploring the rich and diverse world of beer. Here, you can navigate through different beer styles, learn about their unique characteristics, and discover new favorites. Whether you are a casual drinker, a craft enthusiast, or just curious, this site makes beer exploration simple and enjoyable. </p>
+                <p>Click on the navigation above to dive into each style, find recommendations, and enjoy your journey through flavors, aromas, and traditions. Cheers to discovering your perfect beer!</p>
+              </div>
+        <% }%>
+        </div>
+    </main>
+</body>
+</html>

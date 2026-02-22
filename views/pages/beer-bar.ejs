@@ -1,0 +1,49 @@
+<%- include("../partials/head") %>
+<body class="layout">
+    <%- include("../partials/main-sidebar") %>
+    <main class="responsive">
+        <%- include("../partials/sub-navbar") %>
+        <div class="page bottom active">
+            <h2 class="padding">My Favorite Craft Beer Bars in Stockholm</h2>
+            <% if(selectArea && selectArea.length > 0) { %>
+                <h4 class="padding"><%= selectArea[0].area %></h4>
+                <div class="grid">
+                    <% selectArea.forEach(beerBar => { %>
+                            <div class="s12 m6 l4">
+                                <article class="no-padding round">
+                                    <img class="responsive small top-round" 
+                                         alt="<%= beerBar.name %>" 
+                                         src="<%= beerBar.image %>"
+                                         style="height: 300px; object-fit:cover; object-position:center 70%"
+                                    >
+                                    <div class="padding">
+                                        <div style="min-height: 64px">
+                                            <h5><%= beerBar.name %></h5>
+                                        </div>
+                                        <p><%= beerBar.address %></p>
+                                        <p><%= beerBar.description %></p>
+                                        <div class="row gap">
+                                            <a href="<%= beerBar.homepage %>" class="icon-button">
+                                              <i>home</i>
+                                            </a>
+                                            <a href="<%= beerBar.taplist %>" class="icon-button">
+                                              <i class="fa-brands fa-untappd"></i>
+                                            </a>
+                                      </div>
+                                    </div>
+                                </article>
+                            </div>
+                    <% }) %>
+                </div>
+            <%} else {%>
+                <div class="padding">
+                    <h2 class="padding">Explore Stockholm’s Craft Beer Bars</h2>
+                    <p>Stockholm is a city full of creativity, and its craft beer scene reflects that perfectly. From cozy neighborhood pubs to lively modern brewpubs, there is something for every beer lover here. Over time, I’ve discovered a few bars that stand out for their atmosphere, quality, and unique beer selections—and I’m excited to share them with you.</p>
+                    <p>On this page, you’ll find my personal recommendations for craft beer bars around Stockholm. Each one has its own character, whether it’s a quiet spot to enjoy a relaxed evening or a bustling place to taste new and experimental beers. I’ve included details about what makes each bar special, including the types of beers they offer, the vibe of the space, and tips to get the most out of your visit.</p>
+                    <p>These bars represent the best of Stockholm’s craft beer culture, and they’re my go-to spots whenever I want to explore new flavors or just enjoy a favorite beer. Whether you’re a seasoned craft beer fan or just starting your journey, I hope my suggestions help you discover some great places to enjoy beer in the city. Click on the links to explore each bar and start your own Stockholm beer adventure!</p>
+                </div>
+            <% }%>
+        </div>
+    </main>
+</body>
+</html>

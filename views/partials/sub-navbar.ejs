@@ -1,0 +1,18 @@
+<nav class="scroll padding">
+    <% if (locals.pageType) { %>
+        <% if(pageType === "beerList") { %>
+            <% beerInfo.forEach(list => { %>
+                <a href="/beer-list?id=<%= list.id %>">
+                    <button class="chip"> <%= list.name %></button>
+                </a>
+            <% });%>
+        <% } else if (pageType === "beerBarList") {%>
+            <% barArea.forEach(area => { %>
+                <a href="/beer-bar?area=<%= area.replace(" ","").toLowerCase() %>">
+                  <button class="chip"><%= area %></button>
+                </a>
+              <% }) %>
+        <% }
+            %>
+    <% } %>
+  </nav>
