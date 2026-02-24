@@ -7,6 +7,11 @@ body {
   background-color: brown;
 }
 
+.header_title,
+.section_title {
+  font-family: "Pacifico", serif;
+}
+
 .hero {
   background-image: url("../images/hero-image.png");
   background-size: cover;
@@ -20,6 +25,22 @@ body {
 }
 .hero-content {
   text-align: center;
-  color: white;
   z-index: 2;
+  font-family: "Pacifico", serif;
+}
+
+.hero-content span {
+  font-family: "Pacifico", serif;
+  background: linear-gradient(transparent 0%, #e9ddff 0%);
+}
+
+.card-img {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 500px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
 }

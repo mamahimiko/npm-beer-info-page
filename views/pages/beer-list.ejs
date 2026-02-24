@@ -4,12 +4,13 @@
     <main class="responsive">
       <%- include("../partials/sub-navbar") %>
       <div class="page bottom active">
-		<h2 class="padding">Discover the World of Beer</h2>
+		<h2 class="padding section_title">Discover the World of Beer</h2>
         <% if(selectedBeer) { %>
           <article class="no-padding l">
             <div class="grid no-space">
               <div class="s6">
-                <img class="responsive" src="<%= selectedBeer.image %>"  style="height: 300px">
+                <div class="responsive card-img"  
+                      style="background-image: url('../images/<%= selectedBeer.image %>')"></div>  
               </div>
               <div class="s6">
                 <div class="padding">
@@ -23,7 +24,9 @@
             </div>
           </article>
           <article class="no-padding round m s">
-                <img class="responsive medium top-round" src="<%= selectedBeer.image %> "  style="height: 400px";>
+                <div class="responsive card-img"  
+                      style="background-image: url('../images/<%= selectedBeer.image %>')"></div>  
+              </div>
               </div>
                 <div class="padding m s">
                   <h5><%= selectedBeer.name %></h5>
